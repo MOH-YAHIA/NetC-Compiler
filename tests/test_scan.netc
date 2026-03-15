@@ -1,0 +1,43 @@
+# Phase 1: Keywords and Data Types
+link "math_library.netc";
+
+init() {
+    text my_string = "Hello NetC";
+    dnum my_int = 100;
+    cnum my_float = 3.14159;
+    flag is_running = true;
+    is_running = false;
+
+    if (my_int == 100) {
+        forward(my_string);
+    } else {
+        yield my_int;
+    }
+}
+
+# Phase 2: Loops and Logic
+network process_data(dnum input_val, flag status) {
+    iterate (dnum i = 0; i < 10; i++) {
+        input_val += 1;
+    }
+
+    until (status == true) {
+        feed input_val;
+        status = false;
+    }
+}
+
+# Phase 3: Operators and Bitwise
+# Testing all combined and single operators
+dnum a = 10;
+a++;
+a--;
+a += 5;
+a -= 2;
+a *= 3;
+a /= 1;
+
+flag b = (10 > 5) && (2 <= 4) || !(5 != 5);
+dnum c = (10 & 2) | (5 ^ 1) << 2 >> 1;
+dnum d = 10 % 3;
+dnum e = ~10; # Bitwise NOT

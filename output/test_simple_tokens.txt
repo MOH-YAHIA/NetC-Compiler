@@ -1,4 +1,4 @@
-Token Analysis for: test_ast_simple.netc
+Token Analysis for: tests/test_simple.netc
 
 Line	Col	Type			Lexeme
 ----	---	----			------
@@ -25,11 +25,11 @@ Line	Col	Type			Lexeme
 10	5	LPAREN				(
 10	6	RPAREN				)
 11	1	LBRACE				{
-12	5	IDENTIFIER			dnumo
-12	11	IDENTIFIER			x
-12	13	ASSIGN				=
-12	15	INTEGER_LITERAL			5
-12	16	SEMICOLON			;
+12	5	DNUM				dnum
+12	10	IDENTIFIER			x
+12	12	ASSIGN				=
+12	14	INTEGER_LITERAL			5
+12	15	SEMICOLON			;
 13	5	DNUM				dnum
 13	10	IDENTIFIER			y
 13	12	ASSIGN				=

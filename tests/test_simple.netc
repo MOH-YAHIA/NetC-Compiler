@@ -9,7 +9,7 @@ network add(dnum a, dnum b)
 
 init()
 {
-    dnumo x = 5;
+    dnum x = 5;
     dnum y = 10;
     dnum result = add(x, y);
     forward(result);

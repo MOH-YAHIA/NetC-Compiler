@@ -1,4 +1,4 @@
-#include "../include/ast.h"
+#include "ast.h"
 #include <iostream>
 
 using namespace std;

@@ -1,4 +1,4 @@
-#include "../include/semantic.h"
+#include "semantic.h"
 #include <iostream>
 
 using namespace std;

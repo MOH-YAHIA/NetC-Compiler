@@ -1,4 +1,4 @@
-#include "../include/token.h"
+#include "token.h"
 
 // Token constructor implementation
 Token::Token(TokenType t, string lex, int l, int c) 
