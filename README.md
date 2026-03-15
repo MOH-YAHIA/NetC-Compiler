@@ -54,17 +54,19 @@ pip install streamlit
 
 2. Navigate to the project root then run the app:
 ```Bash
-streamlit run netc_streamlit.py
+streamlit run src/netc_streamlit.py
 ```
 
 
 ## Project Structure
 ```text
 NetC-Compiler/
-├── src/             # Source code files (.cpp)
-├── include/         # Header files (.h)
-├── tests/           # Sample NetC source files (.netc)
-├── output/          # Generated token lists and analysis results
 ├── bin/             # Compiled executable binaries
-└── docs/            # Documentation for the language and compiler
+├── docs/            # Documentation for the language and compiler
+├── include/         # Header files (.h)
+├── output/          # Generated token lists and analysis results
+├── src/             # Source code files (.cpp)
+├── tests/           # Sample NetC source files (.netc)
+├── .gitignore       # Files and folders to be ignored by Git
+└── README.md        # Project overview and documentation
 ```
