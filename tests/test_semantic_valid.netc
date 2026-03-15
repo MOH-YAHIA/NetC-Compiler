@@ -1,0 +1,62 @@
+# Valid NetC program - No semantic errors
+
+link "math.ai";
+dnum x = 5;
+network add(dnum a, dnum b)
+{
+    dnum result = a + b;
+    yield result;
+}
+
+network multiply(dnum x, cnum y)
+{
+    cnum result = x * y;
+    yield result;
+}
+
+init()
+{
+    # Proper declarations
+    dnum x = 5;
+    dnum y = 10;
+    cnum rate = 0.95;
+    text message = "Hello NetC";
+    flag isActive = true;
+    
+    # Valid assignments (types match)
+    x = 15;
+    y = x + 5;
+    rate = 3.14;
+    
+    # Valid function calls
+    dnum sum = add(x, y);
+    cnum product = multiply(x, rate);
+    
+    # Valid conditions
+    if (x > y)
+    {
+        forward(message);
+    }
+    else
+    {
+        forward(sum);
+    }
+    
+    # Valid loop
+    until (x >= 20)
+    {
+        x = x + 1;
+        forward(x);
+    }
+    
+    # Valid iterate loop
+    iterate (dnum i = 0; i < 5; i = i + 1)
+    {
+        forward(i);
+    }
+    
+    # Feed statement
+    dnum input;
+    feed input;
+    forward(input);
+}

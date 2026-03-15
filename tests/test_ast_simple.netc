@@ -1,0 +1,16 @@
+# Simple program to test AST generation
+
+link "math.ai";
+
+network add(dnum a, dnum b)
+{
+    yield a + b;
+}
+
+init()
+{
+    dnumo x = 5;
+    dnum y = 10;
+    dnum result = add(x, y);
+    forward(result);
+}

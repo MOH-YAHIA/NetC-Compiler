@@ -1,0 +1,23 @@
+# Basic NetC Program Test
+# This tests basic keywords, data types, and simple operations
+
+link "mathlib.ai";
+
+network addTwo(dnum a, dnum b)
+{
+    yield a + b;
+}
+
+init()
+{
+    dnum x = 5;
+    dnum y = 10;
+    dnum z;
+    
+    feed z;
+    
+    iterate (dnum i = 0; i < 3; i++)
+    {
+        forward(addTwo(x, y));
+    }
+}

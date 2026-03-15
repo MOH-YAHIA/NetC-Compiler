@@ -1,0 +1,70 @@
+# Valid NetC program for parser testing
+
+link "mathlib.ai";
+
+network calculateSum(dnum a, dnum b)
+{
+    dnum result = a + b;
+    yield result;
+}
+
+network multiply(dnum x, cnum y)
+{
+    yield x * y;
+}
+
+init()
+{
+    # Variable declarations
+    dnum counter = 0;
+    dnum limit = 10;
+    cnum rate = 0.5;
+    text message = "Hello NetC";
+    flag isActive = true;
+    
+    # Assignment
+    counter = 5;
+    
+    # If statement
+    if (counter < limit)
+    {
+        forward(counter);
+    }
+    
+    # If-else statement
+    if (isActive == true)
+    {
+        forward(message);
+    }
+    else
+    {
+        counter = 0;
+    }
+    
+    # Until loop
+    until (counter >= limit)
+    {
+        counter = counter + 1;
+        forward(counter);
+    }
+    
+    # Iterate loop
+    iterate (dnum i = 0; i < 5; i = i + 1)
+    {
+        forward(i);
+    }
+    
+    # Feed statement
+    dnum input;
+    feed input;
+    
+    # Function call
+    dnum sum = calculateSum(counter, limit);
+    forward(sum);
+    
+    # Expressions with precedence
+    dnum complex = (counter + limit) * 2 - 5 / 2;
+    
+    # Return
+    yield 0;
+}
